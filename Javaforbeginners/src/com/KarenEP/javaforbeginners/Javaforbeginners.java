@@ -1,11 +1,14 @@
 package com.KarenEP.javaforbeginners;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Javaforbeginners {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		System.out.println ("Hello world :)");  // Print function 
 		
 		// Types of numbers
@@ -69,13 +72,93 @@ public class Javaforbeginners {
 		}
 			
 		*/
-		
-		
-		
-		
-	}
 
-				
+		// 	Increase or Decrease numbers
+			int num=3;
+			++num;    // Incress valor in 1 (number plus 1)
+			num++;    // The Same but it prints numbers first(without increase)
+			--num;    // Decress valor in 1 (number minus 1)
+			num--;    
+			
+		// Logical operators (equality)
+		   InputStreamReader isr = new InputStreamReader(System.in);
+		   BufferedReader br = new BufferedReader (isr);
+		   
+		   System.out.println("Write 2 colors : "+"blue = 1 "+"yellow = 2 "+"red = 3");
+		   System.out.println("Put the first color");
+		   int felement = Integer.parseInt (br.readLine());
+		   System.out.println("Put the second color");
+		   int selement = Integer.parseInt (br.readLine());
+		   
+		   if (felement==selement){ 									// Equality (==)
+			   System.out.print("They are the same color which is ");
+			   if(felement==1){System.out.println("blue");}
+			   else if (felement==2){System.out.println("yellow");}
+			   else if (felement==3){System.out.println("red");} 
+		   }
+		   
+		   else if (felement!=selement){                                // Not equal to (!=)
+			   System.out.print("They are different colors which makes ");
+			   if(felement+selement==3){System.out.println("green");}
+			   else if(felement+selement==4){System.out.println("purple");}
+			   else if(felement+selement==5){System.out.println("orange");}
+		   }
+         
+		   System.out.println(" ");
+		   
+		// Logical operators (or/and)
+		   System.out.println ("Imagine you have two bottons and you need to open a door");
+		   System.out.println("When you press the button it turns on a light. Try to open the door by pressing buttons");
+		   boolean condition1=false, condition2=true;
+		   System.out.println ("Click: 1 = ON  2=OFF"); 
+		   boolean end=false;
+		   
+		   while(end==false){
+			   System.out.println("Click the first button");
+			   int button1 = Integer.parseInt (br.readLine());
+			   if(button1==1){condition1=true;}
+			   else if (button1==2){condition1=false;}
+			   
+			   System.out.println("Click the second button");
+			   int button2 = Integer.parseInt (br.readLine());
+			   if(button2==1){condition2=true;}
+			   else if(button2==2){condition2=false;}
+			   
+			   if (condition1&&condition2){
+				   System.out.println("You open the door");   // You can only open the door if both are true
+				   while(end==false){
+					   System.out.println("You are in a new room with two boxes");
+					   System.out.println ("Click: 1 = Open  2= Close"); 
+					   
+					   System.out.println("Click the first button");
+					   int box1 = Integer.parseInt (br.readLine());
+					   if(box1==1){condition1=true;}
+					   else if (box1==2){condition1=false;}
+					   
+					   System.out.println("Click the second button");
+					   int box2 = Integer.parseInt (br.readLine());
+					   if(box2==1){condition2=true;}
+					   else if(box2==2){condition2=false;}
+					   
+					   if(!(condition1||condition2)){
+						   System.out.println("You win");
+						   end=true;}
+					   else {System.out.println("Try again");}
+					   
+				   }
+				   
+			   }
+			   
+			   else {System.out.println("The door is close");}
+			   
+			  
+			   
+			   
+			   
+		   }
+		   
+		   
+	}	//Signo final			
 }
 	
 	
