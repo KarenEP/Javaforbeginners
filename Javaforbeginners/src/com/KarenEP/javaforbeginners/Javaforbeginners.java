@@ -20,7 +20,7 @@ public class Javaforbeginners {
 		double d = 0.0; // Decimal values (longer values) [8 bytes] (widely used)
 		
 		// Other types of data
-		char    genre = 'f';   // Unicode character (only one word)
+		char    genre = 'f';   // Unicode character (only one letter)
 		boolean status= false; // Logical object, values=[true,false]
 		 
 		// Cast of variables (changing the type of the data)
@@ -46,32 +46,34 @@ public class Javaforbeginners {
 			array3 [1][1][0] = 'd';
 			array3 [1][1][1] = 'd';
 		
-		//System.out.println(Arrays.toString(array1));      // Print it in one line
-		//System.out.println(Arrays.deepToString(array2));
-		//System.out.println(Arrays.deepToString(array3));
-
-		/*   
-		//Print it in x rows	
-		for(int row1=0; row1<2;row1++){									
-			for(int col = 0; col<Array.getLength(array2) ; col++ ){
-			System.out.print("["+array2[row1][col]+"]"+" ");
-			}
-			System.out.println(); // Different column
-				
-		}
-		
-		// Print it in x rows and x cells
-		for(int row1=0; row1<array2.length;row1++){									
-			for(int col = 0; col<array2[row1].length; col++ ){               // array lenght of columns 
-				for(int cell = 0; cell<array2[row1].length; cell++ ){        // array lenght is the same for columns and cells
-					System.out.print("[["+array3[row1][col][cell]+"]]"+" "); //Each cells [[][]]
+		// How to print different types of arrays
+			// Print it in one line
+			/*  System.out.println(Arrays.toString(array1));      
+				System.out.println(Arrays.deepToString(array2));
+				System.out.println(Arrays.deepToString(array3));
+	
+			 
+			//Print it in x rows	
+			for(int row1=0; row1<2;row1++){									
+				for(int col = 0; col<Array.getLength(array2) ; col++ ){
+				System.out.print("["+array2[row1][col]+"]"+" ");
 				}
-				System.out.print(" "); // Different column
-			}	
-			System.out.println(); // Different row 
-		}
+				System.out.println(); // Different column
+					
+			}
 			
-		*/
+			// Print it in x rows and x cells
+			for(int row1=0; row1<array2.length;row1++){									
+				for(int col = 0; col<array2[row1].length; col++ ){               // array lenght of columns 
+					for(int cell = 0; cell<array2[row1].length; cell++ ){        // array lenght is the same for columns and cells
+						System.out.print("[["+array3[row1][col][cell]+"]]"+" "); //Each cells [[][]]
+					}
+					System.out.print(" "); // Different column
+				}	
+				System.out.println(); // Different row 
+			}
+				
+			*/
 
 		// 	Increase or Decrease numbers
 			int num=3;
@@ -80,85 +82,30 @@ public class Javaforbeginners {
 			--num;    // Decress valor in 1 (number minus 1)
 			num--;    
 			
-		// Logical operators (equality)
-		   InputStreamReader isr = new InputStreamReader(System.in);
-		   BufferedReader br = new BufferedReader (isr);
+		// Logical operators (equality and relational)
+		   int number=3;
+		   int number2=5;
+		   if (number==3){System.out.println( "The number is three " );}  // Use '==' for equal to (number)   
+		   if (number!=2){System.out.println( "The number is not two");}  // Use '!=' for not equal to (number)
+		   // Equality in Strings?
 		   
-		   System.out.println("Write 2 colors : "+"blue = 1 "+"yellow = 2 "+"red = 3");
-		   System.out.println("Put the first color");
-		   int felement = Integer.parseInt (br.readLine());
-		   System.out.println("Put the second color");
-		   int selement = Integer.parseInt (br.readLine());
-		   
-		   if (felement==selement){ 									// Equality (==)
-			   System.out.print("They are the same color which is ");
-			   if(felement==1){System.out.println("blue");}
-			   else if (felement==2){System.out.println("yellow");}
-			   else if (felement==3){System.out.println("red");} 
-		   }
-		   
-		   else if (felement!=selement){                                // Not equal to (!=)
-			   System.out.print("They are different colors which makes ");
-			   if(felement+selement==3){System.out.println("green");}
-			   else if(felement+selement==4){System.out.println("purple");}
-			   else if(felement+selement==5){System.out.println("orange");}
-		   }
-         
-		   System.out.println(" ");
-		   
+		/*
+		   System.out.println(number==number2); // It returns a boolean object [False]
+		   System.out.println(number>number2);  // Greater than (>)[False]
+		   System.out.println(number<number2);  // Less than (<) [True]
+		*/ 
+		
 		// Logical operators (or/and)
-		   System.out.println ("Imagine you have two bottons and you need to open a door");
-		   System.out.println("When you press the button it turns on a light. Try to open the door by pressing buttons");
-		   boolean condition1=false, condition2=true;
-		   System.out.println ("Click: 1 = ON  2=OFF"); 
-		   boolean end=false;
-		   
-		   while(end==false){
-			   System.out.println("Click the first button");
-			   int button1 = Integer.parseInt (br.readLine());
-			   if(button1==1){condition1=true;}
-			   else if (button1==2){condition1=false;}
-			   
-			   System.out.println("Click the second button");
-			   int button2 = Integer.parseInt (br.readLine());
-			   if(button2==1){condition2=true;}
-			   else if(button2==2){condition2=false;}
-			   
-			   if (condition1&&condition2){
-				   System.out.println("You open the door");   // You can only open the door if both are true
-				   while(end==false){
-					   System.out.println("You are in a new room with two boxes");
-					   System.out.println ("Click: 1 = Open  2= Close"); 
-					   
-					   System.out.println("Click the first button");
-					   int box1 = Integer.parseInt (br.readLine());
-					   if(box1==1){condition1=true;}
-					   else if (box1==2){condition1=false;}
-					   
-					   System.out.println("Click the second button");
-					   int box2 = Integer.parseInt (br.readLine());
-					   if(box2==1){condition2=true;}
-					   else if(box2==2){condition2=false;}
-					   
-					   if(!(condition1||condition2)){
-						   System.out.println("You win");
-						   end=true;}
-					   else {System.out.println("Try again");}
-					   
-				   }
-				   
-			   }
-			   
-			   else {System.out.println("The door is close");}
-			   
-			  
-			   
-			   
-			   
-		   }
+		   boolean variable=true;
+		   boolean variable2=false;
+		 /*
+		   System.out.println("variable && variable2 is "+(variable&&variable2));   // AND True+False   = False, It includes two variables 
+		   System.out.println("variable || variable2 is "+(variable || variable2)); // OR True or False = True, Only one variable is needed
+		   System.out.println("! variable"+ (!variable)); 							//It inverts the value of boolean [True-->False]
+		 */
 		   
 		   
-	}	//Signo final			
+	}	//End 	
 }
 	
 	
