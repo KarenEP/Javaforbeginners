@@ -4,7 +4,7 @@ I'm just trying to learn more about programing and Github.
 
 ### Github 
 Things I've learn to do in Github:
-- First of all, I've edited `README` and made a commits. 
+- First of all, I've edited `README` and made commits. 
 - Secondly, I've uploaded my java code.
 - Third, I've merged complementary java code.
 
